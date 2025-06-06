@@ -1,0 +1,107 @@
+.app-footer {
+    background-color: $blue-f;
+    color: $text-on-d;
+    padding: 48px 16px;
+    line-height: 24px;
+    .container--footer {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        max-width: 1536px;
+        margin: 0 auto;
+        a {
+            transition: color .3s;
+            &:hover {
+                color: darken($text-on-d, 10%);
+            }
+        }
+    }
+    .footer-nav-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        a{
+            color: $text-on-d;
+        }
+    }
+    .footer-nav-item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            li {
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+    .footer-nav-social {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-nav-title {
+        color: $w;
+    }
+    .footer-nav-subcription {
+        display: flex;
+        height: 40px;
+        input {
+            padding: 0 16px;
+            min-width: 160px;
+            width: 100%;
+            height: 100%;
+            background-color: $blue-f-line;
+            color: $w;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+            &:focus-visible {
+                outline: 2px solid $w;
+                outline-offset: -2px;
+            }
+        }
+        button {
+            width: 46px;
+            height: 100%;
+            background-color: $btn-blue-d;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            outline: none;
+            padding: 0 16px;
+            color: $w;
+            &:focus-visible {
+                outline: 2px solid $w;
+                outline-offset: -2px;
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        .footer-nav-container {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+        .footer-nav-subcription {
+            height: fit-content;
+            flex-direction: column;
+            input {
+                box-sizing: border-box;
+                min-width: 100%;
+                height: 40px;
+                border-radius: 8px 8px 0 0;
+            }
+            button {
+                width: 100%;
+                height: 40px;
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+    .footer-sign {
+        text-align: center;
+        font-size: 14px;
+        padding-top: 30px;
+        border-top: 1px solid $blue-f-line;
+    }
+}

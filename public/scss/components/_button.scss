@@ -1,0 +1,63 @@
+.btn {
+    padding: 12px 24px;
+    background-color: $btn-blue-d;
+    color: $w;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: darken($btn-blue-d, 10%);
+    }
+
+    &--profile {
+        background-color: $btn-blue-p;
+        &:hover {
+            background-color: darken($btn-blue-p, 5%);
+        }
+    };
+
+    &--white {
+        background-color: $w;
+        color: $btn-blue-d;
+        &:hover {
+            background-color: darken($w, 10%);
+        }
+    }
+
+    &--light {
+        background-color: $btn-blue-l;
+        color: $blue-d;
+        &:hover {
+            background-color: darken($btn-blue-l, 10%);
+        }
+    }
+
+    &--green {
+        background-color: $btn-green;
+        &:hover {
+            background-color: darken($btn-green, 10%);
+        }
+    }
+
+    &--red {
+        background-color: $btn-red-l;
+        color: $text-r;
+        &:hover {
+            background-color: darken($btn-red-l, 10%);
+        }
+    }
+}
+.btn-container{
+    display: flex;
+    gap: 16px;
+    &--column {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+.link-btn {
+    margin-top: 8px;
+    color: $btn-blue-d;
+    font-weight: 600;
+}

@@ -1,0 +1,10 @@
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 77px;
+    .app-main {
+        flex: 1;
+    }
+}

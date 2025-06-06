@@ -1,0 +1,149 @@
+.flights-section {
+    .flights-filter {
+        background-color: $w;
+        border-radius: 12px;
+    }
+    .flights-filter-container {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .flights-filter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .filter-flex{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            .filter-item {
+                min-width: 200px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                input, select {
+                    height: fit-content;
+                    padding: 10px 17px;
+                    border-radius: 8px;
+                    border: 1px solid $light-gr;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .flights-catalog {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .flights-catalog-item {
+        width: 100%;
+        .flights-card {
+            min-height: 250px;
+            display: flex;
+            border-radius: 12px;
+            background-color: $w;
+            overflow: hidden;
+            &-img {
+                flex: 1 1 25%;
+                min-width: 200px;
+                height: 300px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-info {
+                flex: 2 1 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px;
+                .flights-info-flex {
+                    display: flex;
+                    gap: 8px;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    &--start {
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        .flights-class {
+                            padding: 4px 8px;
+                            background-color: $light-gr;
+                            border-radius: 4px;
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                        .flights-type {
+                            color: $text-on-l;
+                        }
+                    }
+                    &--col {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 8px;
+                        .card-time {
+                            color: $text-on-l;
+                        }
+                    }
+                }
+                .flights-info-inway {
+                    padding: 4px 8px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    white-space: nowrap;
+                }
+            }
+            &-actions {
+                background-color: $light-gr;
+                flex: 1 1 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 24px;
+                .actions-flex {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    text-align: end;
+                    button {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                    .flights-price {
+                        color: $btn-blue-d;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 32px;
+                        white-space: nowrap;
+                    }
+                    .flights-places {
+                        color: $text-on-l;
+                        font-size: 14px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+                &-img {
+                    flex: none;
+                    height: 200px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

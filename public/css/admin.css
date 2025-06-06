@@ -1,0 +1,94 @@
+.admin-links {
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
+
+.admin-create_edit-box {
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.admin-form {
+    max-width: 50vw;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.admin-form input,select {
+    height: 30px;
+    padding-inline: 10px;
+}
+
+.admin-form textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 30px;
+    height: 60px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.admin-form > div button,
+.admin-form > div a {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.admin-form > div img {
+    margin-top: 15px;
+}
+
+.admin-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.admin-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.admin-card strong {
+    margin-right: 10px;
+}
+
+.admin-card-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-card-btns * {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.admin-card-btns *{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .admin-form {
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,117 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $blue-d;
+    .container--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        transition: position .8s ease;
+    }
+
+    .app-logo {
+        flex-shrink: 0;
+    }
+
+    .header-actions {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .header-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 24px;
+        a {
+            color: $w;
+            white-space: nowrap;
+            transition: color .3s ease;
+            &.active-link {
+                border-bottom: 2px solid $light-gr;
+            }
+            &.disabled-link {
+                transition: none;
+                color: $text-on-d;
+            }
+            &:hover:not(.disabled-link) {
+                color: darken($w, 35%);
+            }
+        }
+    }
+
+    .header-burger {
+        position: absolute;
+        right: 16px;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: opacity .3s ease, transform .3s ease;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $w;
+            transform-origin: center;
+            transition: all .3s ease;
+        }
+        &.active {
+            span:nth-child(1) {
+                transform: translateY(5px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-5px) rotate(-45deg);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header-actions {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 77px;
+            right: -100vw;
+            flex-direction: column;
+            background: darken($blue-d, 15%);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: .5s all ease;
+            &.active {
+                right: 0;
+                overflow: hidden;
+            }
+        }
+        
+        .header-nav {
+            position: static;
+            flex-direction: column;
+            gap: 12px;
+            a {
+                width: fit-content;
+            }
+        }
+        
+        .header-burger {
+            visibility: visible;
+            height: 45px;
+            display: flex;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}

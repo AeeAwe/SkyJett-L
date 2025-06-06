@@ -1,0 +1,75 @@
+.cards-item {
+    box-sizing: border-box;
+    min-width: 250px;
+    background: $w;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+
+    
+    &:hover {
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .card-icon {
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    
+    &--no-bg {
+        background: none;
+        text-align: center;
+        a {
+            color: $w;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &--grid-3 {
+        flex: 1;
+    }
+
+    &--with-img {
+        padding: 0;
+        border: 1px solid $text-on-d;
+        .card-img {
+            height: 192px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .card-price {
+                color: $btn-blue-d;
+                font-size: 16px;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+            .card-time {
+                margin-bottom: 8px;
+                color: $text-on-l;
+            }
+            .card-content-flex {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+            }
+        }
+    }
+    @media (max-width: 573px) {
+        min-width: 100%;
+    }
+}

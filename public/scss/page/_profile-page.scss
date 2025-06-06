@@ -1,0 +1,76 @@
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .profile-grid-container {
+        display: grid;
+        gap: 32px;
+        .grid-item {
+            padding: 24px;
+            background-color: $w;
+            border-radius: 12px;
+        }
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .profile-img {
+                    width: 96px;
+                    height: 96px;
+                    border-radius: 100%;
+                    background-color: $btn-blue-l;
+                    margin-bottom: 24px;
+                }
+                .profile-id {
+                    color: $text-on-l;
+                }
+            }
+            &-data {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .profile-data-flex {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 16px;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid $light-gr;
+                    label {
+                        color: $text-on-l;
+                    }
+                    span {
+                        color: $b;
+                        font-weight: 600;
+                    }
+                }
+            }
+            &-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                button {
+                    width: 100%;
+                    border: none;
+                }
+            }
+        }
+        @media (min-width: 880px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            .grid-item {
+                &-span-1 {
+                    grid-column: span 1 / span 1;
+                }
+                &-span-2 {
+                    grid-column: span 2 / span 2;
+                    .grid-item:first-child {
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

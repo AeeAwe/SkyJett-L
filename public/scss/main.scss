@@ -1,0 +1,20 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import './base/reset';
+@import './base/globals';
+@import './base/typography';
+
+@import './components/button';
+@import './components/card';
+
+@import './layout/app';
+@import './layout/container';
+@import './layout/header';
+@import './layout/main';
+@import './layout/footer';
+
+@import './page/auth-page';
+@import './page/profile-page';
+@import './page/home-page';
+@import './page/catalog-page';

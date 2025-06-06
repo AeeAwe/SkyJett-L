@@ -1,0 +1,26 @@
+.container {
+    box-sizing: border-box;
+    max-width: 1536px;
+    width: 100%;
+    margin: 0 auto;
+    &--header {
+        height: 77px;
+        padding: 16px;
+    }
+    &--main {
+        padding: 32px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        &.home-layout {
+            gap: 64px;
+        }
+    }
+    &--footer {
+        padding: 0 16px;
+    }
+    &--auth {
+        padding: 36px 16px 64px;
+        // padding: 64px 16px;
+    }
+}
