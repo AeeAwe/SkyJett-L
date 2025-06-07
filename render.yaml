@@ -1,12 +1,9 @@
 services:
   - type: web
     name: laravel-app
-    env: php
-    buildCommand: |
-      composer install --no-dev
-      php artisan config:cache
-      php artisan migrate --force
-    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: APP_ENV
         value: production
@@ -15,28 +12,26 @@ services:
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST
-        fromService:
-          name: laravel-db
-          type: mysql
-          property: host
+        fromDatabase:
+            name: laravel-db
+            property: host
       - key: DB_PORT
-        value: 3306
+        fromDatabase:
+            name: laravel-db
+            property: port
       - key: DB_DATABASE
-        fromService:
-          name: laravel-db
-          type: mysql
-          property: database
+        fromDatabase:
+            name: laravel-db
+            property: databaseName
       - key: DB_USERNAME
-        fromService:
-          name: laravel-db
-          type: mysql
-          property: user
+        fromDatabase:
+            name: laravel-db
+            property: user
       - key: DB_PASSWORD
-        fromService:
-          name: laravel-db
-          type: mysql
-          property: password
+        fromDatabase:
+            name: laravel-db
+            property: password
 
 databases:
   - name: laravel-db
-    databaseName: laravel
+    plan: free
