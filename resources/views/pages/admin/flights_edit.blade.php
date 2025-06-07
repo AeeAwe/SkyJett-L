@@ -68,7 +68,7 @@
                 <div>
                     <label>Текущее изображение</label>
                     @if($flight->image)
-                        <img src="{{ asset('storage/' . $flight->image) }}" alt="Изображение рейса" width="200" borderRadius="15px">
+                        <img src="{{ secure_asset('storage/' . $flight->image) }}" alt="Изображение рейса" width="200" borderRadius="15px">
                     @else
                         <p style="color: #a6a6a6;">Нет изображения</p>
                     @endif

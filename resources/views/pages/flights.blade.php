@@ -57,7 +57,7 @@
                         <div class="flights-catalog-item">
                             <div class="flights-card">
                                 @php
-                                    $imagePath = $flight->image ? asset('storage/' . $flight->image) : asset('imgs/default-flight.webp');
+                                    $imagePath = $flight->image ? secure_asset('storage/' . $flight->image) : secure_asset('imgs/default-flight.webp');
                                 @endphp
 
                                 <div class="flights-card-img">

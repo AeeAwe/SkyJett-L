@@ -1,6 +1,6 @@
 <header class="app-header">
     <div class="container container--header">
-        <a href="{{ route('home') }}" class="app-logo"><img src="{{ asset('icons/logo_w.svg') }}" alt="SkyJett — логотип"></a>
+        <a href="{{ route('home') }}" class="app-logo"><img src="{{ secure_asset('icons/logo_w.svg') }}" alt="SkyJett — логотип"></a>
         <div class="header-actions">
             <nav class="header-nav">
                 <a href="{{ route('home') }}">Главная</a>

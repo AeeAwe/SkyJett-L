@@ -45,7 +45,7 @@
                     @forelse($popularFlights as $flight)
                         <div class="cards-item cards-item--with-img cards-item--grid-3">
                             @php
-                                $imagePath = $flight->image ? asset('storage/' . $flight->image) : asset('imgs/default-flight.webp');
+                                $imagePath = $flight->image ? secure_asset('storage/' . $flight->image) : secure_asset('imgs/default-flight.webp');
 
                                 $departure = \Carbon\Carbon::parse($flight->departure);
                                 $arrival = \Carbon\Carbon::parse($flight->arrival);
