@@ -29,7 +29,6 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/users', [AdminController::class, 'indexUsers'])->name('admin.users');
     Route::get('/admin/flights', [AdminController::class, 'indexFlights'])->name('admin.flights');
     Route::get('/admin/flights/create', [AdminController::class, 'create'])->name('admin.flights.create');
-    Route::get('/admin/flights/edit',  [AdminController::class, 'edit'])->name('admin.flights.edit');
     Route::post('/admin/flights/store', [AdminController::class, 'store'])->name('admin.flights.store');
     Route::get('/admin/flights/{flight}/edit', [AdminController::class, 'edit'])->name('admin.flights.edit');
     Route::put('/admin/flights/{flight}/update', [AdminController::class, 'update'])->name('admin.flights.update');
