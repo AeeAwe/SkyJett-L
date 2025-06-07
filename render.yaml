@@ -36,5 +36,5 @@ services:
 
 databases:
   - name: laravel-db
-    database: laravel
+    databaseName: laravel
     user: root
