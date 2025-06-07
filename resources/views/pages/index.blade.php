@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     @empty
-                        <p style="text-align: center; font-weight: 700; margin: 30px 0;">Рейсов нет</p>
+                        <p style="text-align: center; font-weight: 700; margin: 30px auto;">Рейсов нет</p>
                     @endforelse
                 @endif
                 <!-- <div class="cards-item cards-item--with-img cards-item--grid-3">
