@@ -2,8 +2,10 @@ services:
   - type: web
     name: laravel-app
     env: docker
+    region: frankfurt
     plan: free
-    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: apache2-foreground
     envVars:
       - key: APP_ENV
         value: production
@@ -13,25 +15,26 @@ services:
         value: mysql
       - key: DB_HOST
         fromDatabase:
-            name: laravel-db
-            property: host
+          name: laravel-db
+          property: host
       - key: DB_PORT
         fromDatabase:
-            name: laravel-db
-            property: port
+          name: laravel-db
+          property: port
       - key: DB_DATABASE
         fromDatabase:
-            name: laravel-db
-            property: databaseName
+          name: laravel-db
+          property: database
       - key: DB_USERNAME
         fromDatabase:
-            name: laravel-db
-            property: user
+          name: laravel-db
+          property: user
       - key: DB_PASSWORD
         fromDatabase:
-            name: laravel-db
-            property: password
+          name: laravel-db
+          property: password
 
 databases:
   - name: laravel-db
-    plan: free
+    database: laravel
+    user: root
