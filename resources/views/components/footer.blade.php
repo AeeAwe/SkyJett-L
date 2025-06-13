@@ -33,7 +33,7 @@
                 <h3 class="footer-nav-title">Подписка</h3>
                 <p>Подпишитесь на нашу рассылку, чтобы получать информацию о специальных предложениях и акциях.</p>
                 <form class="footer-nav-subcription" onsubmit="event.preventDefault()">
-                    <input type="email" id="subscription-email" placeholder="Ваш email" autocomplete="email">
+                    <input type="email" id="subscription-email" placeholder="Ваш email" name="email" autocomplete="email">
                     <button aria-label="Подписаться на рассылку">→</button>
                 </form>
             </div>
