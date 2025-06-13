@@ -79,39 +79,6 @@
                         <p style="text-align: center; font-weight: 700; margin: 30px auto;">Рейсов нет</p>
                     @endforelse
                 @endif
-                <!-- <div class="cards-item cards-item--with-img cards-item--grid-3">
-                    <div class="card-img"><img src="imgs/flight1.webp" alt=""></div>
-                    <div class="card-content">
-                        <div class="card-content-flex">
-                            <h3>Москва — Санкт-Петербург</h3>
-                            <span class="card-price">5600 ₽</span>
-                        </div>
-                        <span class="card-time">2023-12-15 • 09:30 - 11:00</span>
-                        <a href="#more" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="cards-item cards-item--with-img cards-item--grid-3">
-                    <div class="card-img"><img src="imgs/flight2.webp" alt=""></div>
-                    <div class="card-content">
-                        <div class="card-content-flex">
-                            <h3>Москва — Сочи</h3>
-                            <span class="card-price">7800 ₽</span>
-                        </div>
-                        <span class="card-time">2023-12-16 • 12:45 - 15:15</span>
-                        <a href="#more" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="cards-item cards-item--with-img cards-item--grid-3">
-                    <div class="card-img"><img src="imgs/flight3.webp" alt=""></div>
-                    <div class="card-content">
-                        <div class="card-content-flex">
-                            <h3>Санкт-Петербург - Калининград</h3>
-                            <span class="card-price">6200 ₽</span>
-                        </div>
-                        <span class="card-time">2023-12-17 • 08:15 - 09:45</span>
-                        <a href="#more" class="btn">Подробнее</a>
-                    </div>
-                </div> -->
             </div>
         </section>
         <section class="app-section app-section--lg-gap services-section">
