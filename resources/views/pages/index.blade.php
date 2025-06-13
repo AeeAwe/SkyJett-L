@@ -58,7 +58,7 @@
                                 $departureTime = $departure->format('H:i');
                                 $arrivalTime = $arrival->format('H:i');
                             @endphp
-                            <div class="card-img"><img src="{{ $imagePath }}" alt="{{ $flight->from }} — {{ $flight->to }}"></div>
+                            <div class="card-img"><img src="{{ $imagePath }}" loading="lazy" alt="{{ $flight->from }} — {{ $flight->to }}"></div>
                             <div class="card-content">
                                 <div class="card-content-flex">
                                     <h3>{{ $flight->from }} — {{ $flight->to }}</h3>

@@ -61,7 +61,7 @@
                                 @endphp
 
                                 <div class="flights-card-img">
-                                    <img src="{{ $imagePath }}" alt="{{ $flight->from }} — {{ $flight->to }}">
+                                    <img src="{{ $imagePath }}" loading="lazy" alt="{{ $flight->from }} — {{ $flight->to }}">
                                 </div>
                                 <div class="flights-card-info">
                                     <div class="flights-info-flex">
